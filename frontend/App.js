@@ -55,6 +55,7 @@ export default class LotsOfStyles extends Component {
 
   componentDidMount(prevProps) {
     this.handleSeach();
+  
   }
 
   handleSeach() {
@@ -68,6 +69,8 @@ export default class LotsOfStyles extends Component {
           leitura: leitura,
           historico: historico
         })
+      }).then(()=>{
+        setTimeout( () =>  this.handleSeach(), 10000);
       })
   }
   
